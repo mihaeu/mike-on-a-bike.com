@@ -1,0 +1,17 @@
+{
+  "name": "odin/odin-blog",
+  "description": "Blogging made easy using odin, the PHP 5.4 content generator.",
+  "keywords": ["generator", "blog", "blogging", "static"],
+  "homepage": "https://github.com/mihaeu/odin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Michael Haeuslmann",
+      "email": "haeuslmann@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "odin/odin": "@dev"
+  }
+}
