@@ -5,11 +5,27 @@ Hey guys,
 
 if you have any questions, suggestions or you simply want to chat with me, then use this contact form to write me a message and I will try to get back to you as soon as possible.
 
-<link href='http://mike-on-a-bike.com/wp-content/plugins/easy-contact-forms/forms/styles/formscompressed/css/std.css?ver=1.4.7' rel='stylesheet' type='text/css' />
-
-<link href='http://mike-on-a-bike.com/wp-content/plugins/easy-contact-forms/forms/styles/formscompressed/css/icons.css?ver=1.4.7' rel='stylesheet' type='text/css' />
-
-<div class='ufo-form' id='ufo-form-id-3'>
-  <noscript>
-  </noscript>
-</div>
+## Write me
+<form action="">
+    <p>
+        <label for="">
+            Name
+            <input type="text">
+        </label>
+    </p>
+    <p>
+        <label for="">
+            E-Mail
+            <input type="text">
+        </label>
+    </p>
+    <p>
+        <label for="">
+            Message
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </label>
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>
