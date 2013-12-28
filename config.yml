@@ -1,0 +1,86 @@
+#=================================================================================================#
+# Basic Settings                                                                                  #
+#=================================================================================================#
+title: mike-on-a-bike.com
+subtitle: Cycling around the world.
+description: Mike left his home in Germany in 2012 and cycled through more than 20 countries since than.
+
+#=================================================================================================#
+# URL                                                                                             #
+#-------------------------------------------------------------------------------------------------#
+# Please provide the URL to your blog without a trailing slash.                                   #
+#=================================================================================================#
+url: http://localhost:8080
+
+#=================================================================================================#
+# Authors                                                                                         #
+#-------------------------------------------------------------------------------------------------#
+# Authors are optional, but will be used for humans.txt, copyright, footer, post meta data etc.   #
+#=================================================================================================#
+author: Michael Haeuslmann
+authors:
+- {name: Michael Haeuslmann, email: "mikeonabikecom@gmail.com", twitter: mikeonabikecom, from: "Wasserburg, Germany"}
+
+#=================================================================================================#
+# Date Format                                                                                     #
+#-------------------------------------------------------------------------------------------------#
+# Default date throughout the blog. You can override this everywhere in your templates by using   #
+# Twigs date() function. (see: twig.sensiolabs.org/doc/functions/date.html)                       #
+#=================================================================================================#
+date_format: d.m.Y
+
+#=================================================================================================#
+# Permalink Pattern                                                                               #
+#-------------------------------------------------------------------------------------------------#
+# options: :title :Y :y :m :d                                                                     #
+#                                                                                                 #
+# e.g. /blog/:Y/:m/:title will produce something like /blog/2014/01/awesome-post                  #
+#=================================================================================================#
+permalink_pattern: /:title/
+
+#=================================================================================================#
+# Pretty URLs                                                                                     #
+#-------------------------------------------------------------------------------------------------#
+# If true will create a file structure like                                                       #
+#                                                                                                 #
+# /awesome-post/index.html                                                                        #
+#                                                                                                 #
+# so the link will be: /awesome-post instead of /awesome-post.html                                #
+#=================================================================================================#
+pretty_urls: 1
+
+#=================================================================================================#
+# Theme Configuration                                                                             #
+#-------------------------------------------------------------------------------------------------#
+#                                                                                                 #
+#=================================================================================================#
+theme: default
+default_layout: @theme/index.html.twig
+theme_assets: %theme_folder%/assets
+ignore_assets: [bower_components, node_modules]
+
+#=================================================================================================#
+# File Structure                                                                                  #
+#-------------------------------------------------------------------------------------------------#
+#                                                                                                 #
+#=================================================================================================#
+
+# this is the base folder in which all your project files are located
+project_dir: /opt/lampp/htdocs/mike-on-a-bike.com
+
+output_folder: %project_dir%/output
+resource_folder: %project_dir%/resources/content
+
+theme_folder: %project_dir%/themes/%theme%
+theme_resource_folder: %theme_folder%/resources
+
+# directory for the odin source
+base_dir: /opt/lampp/htdocs/mike-on-a-bike.com/vendor/odin/odin
+
+#=================================================================================================#
+# Misc                                                                                            #
+#-------------------------------------------------------------------------------------------------#
+#                                                                                                 #
+#=================================================================================================#
+
+resource_extensions: [md,markdown,twig,html,xhtml,rst,txt,xml]

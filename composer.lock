@@ -229,12 +229,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mihaeu/odin.git",
-                "reference": "54eab2f022e55f04b1dc8f6c958401b797b5286d"
+                "reference": "b0a6a9fdbc1b254ed285c4984d47aef027e60df0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mihaeu/odin/zipball/54eab2f022e55f04b1dc8f6c958401b797b5286d",
-                "reference": "54eab2f022e55f04b1dc8f6c958401b797b5286d",
+                "url": "https://api.github.com/repos/mihaeu/odin/zipball/b0a6a9fdbc1b254ed285c4984d47aef027e60df0",
+                "reference": "b0a6a9fdbc1b254ed285c4984d47aef027e60df0",
                 "shasum": ""
             },
             "require": {
@@ -246,9 +246,6 @@
                 "symfony/yaml": "2.*",
                 "twig/twig": "1.*"
             },
-            "bin": [
-                "bin/odin"
-            ],
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -266,7 +263,7 @@
                 }
             ],
             "description": "Static site generator.",
-            "time": "2013-12-28 09:52:09"
+            "time": "2013-12-28 11:54:23"
         },
         {
             "name": "symfony/console",
