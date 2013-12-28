@@ -1,0 +1,14 @@
+{% extends '@theme/layouts/base.html.twig' %}
+
+{% block main %}
+    <div class="row">
+        {% for category, resource in all_categories %}
+            {% if category == "Journal" %}
+                {% for post in resource %}
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ "..." }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

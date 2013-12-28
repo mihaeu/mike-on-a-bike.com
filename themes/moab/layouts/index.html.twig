@@ -1,0 +1,32 @@
+{% extends '@theme/layouts/base.html.twig' %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-9">
+            <h1>{{ title }}</h1>
+            {{ content }}
+        </div>
+        <aside class="col-md-3">
+            <section class="well">
+                <h2>Categories</h2>
+                <ul>
+                    {% for category, resource in all_categories %}
+                        <li>
+                            <a href="{{ site.url }}/category/{{ category }}">{{ category }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section class="well">
+                <h2>Tags</h2>
+                <ul>
+                    {% for tag, resource in all_tags %}
+                        <li>
+                            <a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </aside>
+    </div>
+{% endblock %}

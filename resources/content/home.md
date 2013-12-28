@@ -1,5 +1,6 @@
 ---
 title: Home
+layout: @theme/layouts/home.html.twig
 slug: index.html
 ---
 Hi guys,
