@@ -1,8 +1,5 @@
 ---
 title: 'Catching up: Part 2'
-author: Michael Haeuslmann
-layout: post
-permalink: /2013/02/catching-up-part-2/
 categories:
   - Journal
 ---

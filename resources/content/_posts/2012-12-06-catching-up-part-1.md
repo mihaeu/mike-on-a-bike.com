@@ -1,8 +1,5 @@
 ---
 title: 'Catching up: Part 1'
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/12/catching-up-part-1/
 categories:
   - Journal
 tags:

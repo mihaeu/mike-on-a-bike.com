@@ -1,8 +1,5 @@
 ---
 title: Change of plans
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/05/change-of-plans/
 categories:
   - Journal
 ---

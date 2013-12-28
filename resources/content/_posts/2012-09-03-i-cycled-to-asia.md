@@ -1,8 +1,5 @@
 ---
 title: I CYCLED TO ASIA!!!
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/09/i-cycled-to-asia/
 categories:
   - Journal
 tags:

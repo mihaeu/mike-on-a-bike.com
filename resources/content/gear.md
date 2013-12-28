@@ -1,7 +1,5 @@
 ---
 title: Gear
-author: Michael Haeuslmann
-layout: page
 ---
 &nbsp;
 

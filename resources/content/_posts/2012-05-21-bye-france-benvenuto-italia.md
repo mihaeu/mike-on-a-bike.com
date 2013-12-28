@@ -1,12 +1,5 @@
 ---
 title: Bye France! Benvenuto Italia!
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/05/bye-france-benvenuto-italia/
-current_location_date:
-  - '21 05 2012 09:07<br />'
-current_location_static:
-  - '<img src="http://maps.google.com/maps/api/staticmap?center=45.0745654,7.6823186&amp;maptype=terrain&amp;zoom=10&amp;size=280x300&amp;markers=color:red%7Clabel:M%7C45.0745654,7.6823186&amp;sensor=false" height="300" width="280" /><br />'
 categories:
   - Journal
 ---

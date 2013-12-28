@@ -1,8 +1,5 @@
 ---
 title: 100 days on the road
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/07/100-days-on-the-road/
 categories:
   - Journal
 tags:

@@ -1,8 +1,5 @@
 ---
 title: 'Balkan &#8211; Redefining hospitality'
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/07/balkan-redefining-hospitality/
 categories:
   - Journal
 tags:

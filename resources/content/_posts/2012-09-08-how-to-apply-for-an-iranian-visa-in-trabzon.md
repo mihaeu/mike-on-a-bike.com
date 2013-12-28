@@ -1,8 +1,5 @@
 ---
 title: How to apply for an Iranian visa in Trabzon
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/09/how-to-apply-for-an-iranian-visa-in-trabzon/
 categories:
   - Articles
 tags:

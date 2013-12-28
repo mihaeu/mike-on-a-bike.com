@@ -1,8 +1,5 @@
 ---
 title: La dolce vite
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/06/la-dolce-vite/
 categories:
   - Journal
 tags:

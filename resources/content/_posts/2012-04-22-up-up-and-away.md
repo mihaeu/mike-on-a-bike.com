@@ -1,8 +1,5 @@
 ---
 title: Up, Up and Away!
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/04/up-up-and-away/
 categories:
   - Journal
 tags:

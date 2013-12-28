@@ -1,8 +1,5 @@
 ---
 title: Home is where I rest my head
-author: Michael Haeuslmann
-layout: post
-permalink: /2012/10/home-is-where-i-rest-my-head/
 categories:
   - Journal
 tags:

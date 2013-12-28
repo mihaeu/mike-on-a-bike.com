@@ -1,7 +1,5 @@
 ---
 title: Contact
-author: Michael Haeuslmann
-layout: page
 ---
 Hey guys,
 

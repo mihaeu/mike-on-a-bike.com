@@ -1,7 +1,5 @@
 ---
 title: Photography
-author: Michael Haeuslmann
-layout: page
 ---
 I upload all my photos to my Flickr account:
 

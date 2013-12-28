@@ -1,8 +1,5 @@
 ---
 title: Iran all the way
-author: Michael Haeuslmann
-layout: post
-permalink: /2013/05/iran-all-the-way/
 categories:
   - Journal
 tags:

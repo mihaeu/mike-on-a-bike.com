@@ -1,8 +1,5 @@
 ---
 title: From Iran with Love
-author: Michael Haeuslmann
-layout: post
-permalink: /2013/07/from-iran-with-love/
 categories:
   - Journal
 tags:
