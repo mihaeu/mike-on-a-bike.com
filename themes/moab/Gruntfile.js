@@ -86,6 +86,6 @@ grunt.loadNpmTasks('grunt-shell');
 grunt.loadNpmTasks('grunt-recess');
 grunt.loadNpmTasks('grunt-uncss');
 
-grunt.registerTask('default', ['jshint', 'clean', 'recess', 'uglify']);
+grunt.registerTask('default', ['jshint', 'recess', 'uglify']);
 };
 

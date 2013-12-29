@@ -3,11 +3,13 @@
 {% block main %}
     <div class="row">
         <div class="col-md-9">
-            <h1>{{ title }}</h1>
-            {{ content }}
+            <div class="box">
+                <h1>{{ title }}</h1>
+                {{ content }}
+            </div>
         </div>
         <aside class="col-md-3">
-            <section class="well">
+            <section class="box">
                 <h2>Categories</h2>
                 <ul>
                     {% for category, resource in all_categories %}
@@ -17,7 +19,7 @@
                     {% endfor %}
                 </ul>
             </section>
-            <section class="well">
+            <section class="box">
                 <h2>Tags</h2>
                 <ul>
                     {% for tag, resource in all_tags %}

@@ -1,14 +1,23 @@
 {% extends '@theme/layouts/base.html.twig' %}
 
 {% block main %}
-    <div class="row">
+    <articles class="row">
         {% for category, resource in all_categories %}
             {% if category == "Journal" %}
                 {% for post in resource %}
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ "..." }}</p>
+                    <article class="col-md-3{% if loop.index % 4 == 0 %} clearfix{% endif %}">
+                        <div class="box">
+                            <div class="title">
+                                <h3>{{ post.title }}</h3>
+                            </div>
+                            <div class="content">
+                                <p>{{ post.content|striptags|slice(0,200) }} ...</p>
+                            </div>
+                            <a href="{{ site.url }}/{{ post.url }}" class="btn btn-success">Read more</a>
+                        </div>
+                    </article>
                 {% endfor %}
             {% endif %}
         {% endfor %}
-    </div>
+    </articles>
 {% endblock %}
