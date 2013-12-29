@@ -13,7 +13,7 @@
                             <div class="content">
                                 <p>{{ post.content|striptags|slice(0,200) }} ...</p>
                             </div>
-                            <a href="{{ site.url }}/{{ post.url }}" class="btn btn-success">Read more</a>
+                            <a href="{{ site.url }}/{{ post.slug }}" class="btn btn-success">Read more</a>
                         </div>
                     </article>
                 {% endfor %}

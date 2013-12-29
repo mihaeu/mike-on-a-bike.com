@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
   uglify: {
     dist: {
-      src: ['bower_components/jquery/jquery.js', 'bower_components/bootstrap/js/collapse.js'],
+      src: ['bower_components/jquery/jquery.js'],
       dest: 'assets/js/scripts.min.js'
     }
   },
@@ -42,16 +42,16 @@ module.exports = function (grunt) {
         tasks: ['jshint:gruntfile']
     },
     templates: {
-      files: '**/*.twig',
+      files: '../../resources/**/*.md',
         tasks: ['shell:generate']
     },
     css: {
-      files: '<%= uglify.dist.src %>',
-      tasks: ['uglify']
+      files: 'assets/**/*.less',
+      tasks: ['recess', 'shell:generate']
     },
     js: {
-      files: '<%= recess.dist.files %>',
-      tasks: ['recess']
+      files: 'assets/**/*.js',
+      tasks: ['uglify', 'shell:generate']
     }
   },
   recess: {
@@ -72,7 +72,7 @@ module.exports = function (grunt) {
       options: {
         stdout: true
       },
-      command: 'php ../../bin/odin --dir=/opt/lampp/htdocs/mike-on-a-bike.com'
+      command: 'php ../../odin generate --dir=/opt/lampp/htdocs/mike-on-a-bike.com'
     }
   }
 });
@@ -86,6 +86,6 @@ grunt.loadNpmTasks('grunt-shell');
 grunt.loadNpmTasks('grunt-recess');
 grunt.loadNpmTasks('grunt-uncss');
 
-grunt.registerTask('default', ['jshint', 'recess', 'uglify']);
+grunt.registerTask('default', ['jshint', 'recess', 'uglify', 'shell:generate']);
 };
 
