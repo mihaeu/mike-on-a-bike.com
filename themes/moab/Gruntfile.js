@@ -37,12 +37,15 @@ module.exports = function (grunt) {
     }
   },
   watch: {
+    options: {
+      livereload: true,
+    },
     gruntfile: {
       files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
     },
     templates: {
-      files: '../../resources/**/*.md',
+      files: ['../../resources/**/*.md', '**/*.twig'],
         tasks: ['shell:generate']
     },
     css: {
@@ -67,6 +70,13 @@ module.exports = function (grunt) {
       }
     }
   },
+  uncss: {
+    dist: {
+      files: {
+        'assets/css/styles.min.css': ['../../output/**/*.html']
+      }
+    }
+  },
   shell: {
     generate: {
       options: {
@@ -77,7 +87,6 @@ module.exports = function (grunt) {
   }
 });
 
-grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-watch');
