@@ -25,42 +25,55 @@
 
 <body>
     <div class="container">
-        <header class="row">
-            <div class="col-md-2 logo">
-                <img src="{{ site.url }}/assets/img/logo-white.png" width="128" height="128" alt="logo" title="logo" />
+        <header>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="logo">
+                        <img src="{{ site.url }}/assets/img/logo-white.png" alt="logo" title="logo" />
+                    </div>
+                    <div class="title">
+                        {{ site.title }}
+                    </div>
+                </div>
             </div>
-            <div class="col-md-2 title">
-                {{ site.title }}
-            </div>
-            <nav class="col-md-8">
-                <ul class="nav nav-pills">
-                    {% block navigation %}
-                        <li>
-                            <a href="{{ site.url }}">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ site.url }}/photography">
-                                Photography
-                            </a>
-                        </li>
-                        <li class="clearfix">
-                            <a href="{{ site.url }}/gear">
-                                Gear
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ site.url }}/route">
-                                Route
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ site.url }}/contact">
-                                Contact
-                            </a>
-                        </li>
-                    {% endblock %}
+            <nav>
+                <ul>
+                <div class="col-lg-4">
+                    <li>
+                        <a href="{{ site.url }}">
+                            Home&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ site.url }}/category/journal">
+                            Journal&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-book"></i>
+                        </a>
+                    </li>
+                </div>
+                <div class="col-lg-4">
+                    <li>
+                        <a href="{{ site.url }}/photography">
+                            Photography&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-camera"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ site.url }}/gear">
+                            Gear&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-wrench"></i>
+                        </a>
+                    </li>
+                </div>
+                <div class="col-lg-4">
+                    <li>
+                        <a href="{{ site.url }}/route">
+                            Route&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-map-marker"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ site.url }}/contact">
+                            Contact&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-envelope"></i>
+                        </a>
+                    </li>
+                </div>
                 </ul>
             </nav>
         </header>
@@ -69,10 +82,8 @@
             
         {% endblock %}
 
-        <hr>
-
-        <footer class="row">
-            <p>&copy; {{ "now"|date("Y") }} {{ site.author }}</p>
+        <footer>
+            <div class="box">&copy; {{ "now"|date("Y") }} {{ site.author }}</div>
         </footer>
     </div> <!-- /container -->
 

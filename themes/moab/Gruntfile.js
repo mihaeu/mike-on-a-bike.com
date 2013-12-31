@@ -92,14 +92,6 @@ module.exports = function (grunt) {
           base: '../../output'
         }
       }
-    },
-    notify: {
-      recess: {
-        options: {
-          title: 'Task Complete',  // optional
-          message: 'SASS and Uglify finished running', //required
-        }
-      }
     }
   });
 
