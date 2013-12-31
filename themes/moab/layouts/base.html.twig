@@ -80,14 +80,11 @@
 
         {% block main %}{% endblock %}
 
-        <footer>
-            <div class="outer-box">
-                <div class="box">&copy; {{ "now"|date("Y") }} {{ site.author }}</div>
-            </div>
-        </footer>
-    </div> <!-- /container -->
-
-
+        {% if sidebar is not defined %}
+            {% include '@theme/partials/footer.html.twig' %}
+        {% endif %}
+    </div>
+    
     <script src="{{ site.url }}/js/scripts.min.js"></script>
 </body>
 </html>

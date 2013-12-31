@@ -1,5 +1,7 @@
 {% extends '@theme/layouts/base.html.twig' %}
 
+{% set sidebar = true %}
+
 {% block main %}
     <div class="row">
         <div class="col-md-9">
@@ -7,6 +9,9 @@
                 <h1>{{ title }}</h1>
                 {{ content }}
             </div>
+            {% if sidebar is defined %}
+                {% include '@theme/partials/footer.html.twig' %}
+            {% endif %}
         </div>
         <aside class="col-md-3">
             <section class="box">
