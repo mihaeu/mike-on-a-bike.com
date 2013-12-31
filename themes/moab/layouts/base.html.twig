@@ -78,12 +78,12 @@
             </nav>
         </header>
 
-        {% block main %}
-            
-        {% endblock %}
+        {% block main %}{% endblock %}
 
         <footer>
-            <div class="box">&copy; {{ "now"|date("Y") }} {{ site.author }}</div>
+            <div class="outer-box">
+                <div class="box">&copy; {{ "now"|date("Y") }} {{ site.author }}</div>
+            </div>
         </footer>
     </div> <!-- /container -->
 

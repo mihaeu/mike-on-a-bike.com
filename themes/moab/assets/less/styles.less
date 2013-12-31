@@ -68,7 +68,6 @@ body {
 
 header {
     text-align: center;
-    padding-left: 10px;
     .make-row();
 
     .logo {
@@ -162,10 +161,10 @@ articles {
 }
 
 footer {
-   text-align: center;
+    .make-row();
+    text-align: center;
 
-   .box {
-    width: 80%;
-    margin: 0 auto;
-   }
+    .outer-box {
+        .make-lg-column(12);
+    }
 }
