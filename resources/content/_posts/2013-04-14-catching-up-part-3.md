@@ -1,5 +1,5 @@
 ---
-title: 'Catching up: Part 3'
+title: Catching up: Part 3
 categories:
   - Journal
 tags:
