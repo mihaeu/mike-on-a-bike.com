@@ -1,0 +1,56 @@
+{% extends '@theme/layouts/base.html.twig' %}
+
+{% set sidebar = true %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-9">
+            <div class="box">
+                <article>
+                    <header>
+                        <h1 class="entry-title">{{ title }}</h1>
+                        <time class="published" datetime="{{ date|date("Y-m-d") }}">{{ date|date("d.m.Y") }}</time>
+                        <p class="byline author vcard">By
+                            <a href="{{ site.url }}" rel="author" class="fn">
+                                {{ site.author }}
+                            </a>
+                        </p>
+
+                    </header>
+
+                    <div class="entry-content">
+                        {{ content }}
+                    </div>
+
+                    {% include '@theme/partials/comments.html.twig' %}
+                </article>
+            </div>
+            {% if sidebar is defined %}
+                {% include '@theme/partials/footer.html.twig' %}
+            {% endif %}
+        </div>
+        <aside class="col-md-3">
+            <section class="box">
+                <h2>Categories</h2>
+                <ul>
+                    {% for category, resource in all_categories %}
+                        {% if category != "none" %}
+                        <li>
+                            <a href="{{ site.url }}/category/{{ category }}">{{ category }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </section>
+            <section class="box">
+                <h2>Tags</h2>
+                <p>
+                    {% for tag, resource in all_tags %}
+                        <a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a>
+                        {% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+            </section>
+        </aside>
+    </div>
+{% endblock %}
