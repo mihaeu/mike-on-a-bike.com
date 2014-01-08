@@ -1,0 +1,31 @@
+{% extends '@theme/layouts/base.html.twig' %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <h1>Category: {{ title }}</h1>
+            </div>
+        </div>
+    </div>
+    <articles>
+        {% for category, resource in all_categories %}
+            {% if category == title %}
+                {% for post in resource|sortBy('date')|reverse %}
+                    <article class="{% if loop.index % 4 == 0 %} clearfix{% endif %}">
+                        <div class="box">
+                            <img src="{{ site.url }}/assets/img/featured/{{ post.slug }}.jpg" alt="" class="img-rounded" height="232" width="232" title="{{ post.title }}">
+                            <div class="title">
+                                <h3>{{ post.title }}</h3>
+                            </div>
+                            <div class="content">
+                                <p>{{ post.content|striptags|slice(0,200) }} ...</p>
+                            </div>
+                            <a href="{{ site.url }}/{{ post.slug }}" class="btn btn-success">Read more</a>
+                        </div>
+                    </article>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </articles>
+{% endblock %}
