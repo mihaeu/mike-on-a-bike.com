@@ -1,0 +1,21 @@
+<section class="box">
+    <h2>Categories</h2>
+    <ul>
+        {% for category, resource in all_categories %}
+            {% if category != "none" %}
+            <li>
+                <a href="{{ site.url }}/category/{{ category|lower }}">{{ category }}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
+<section class="box">
+    <h2>Tags</h2>
+    <p>
+        {% for tag, resource in all_tags %}
+            <a href="{{ site.url }}/tag/{{ tag|lower }}">{{ tag }}</a>
+            {% if not loop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+</section>

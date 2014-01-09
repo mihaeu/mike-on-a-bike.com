@@ -9,13 +9,21 @@
                 <article>
                     <header>
                         <h1 class="entry-title">{{ title }}</h1>
-                        <time class="published" datetime="{{ date|date("Y-m-d") }}">{{ date|date("d.m.Y") }}</time>
+                        <p>
+                            <time class="published" datetime="{{ date|date("Y-m-d") }}">{{ date|date("d.m.Y") }}</time>
+                        </p>
                         <p class="byline author vcard">By
                             <a href="{{ site.url }}" rel="author" class="fn">
                                 {{ site.author }}
                             </a>
                         </p>
-
+                        <p>
+                            <i class="glyphicon glyphicon-tags"></i> 
+                             {% for tag in tags %}
+                                <a href="{{ site.url }}/tag/{{ tag }}" rel="tag">{{ tag }}</a>
+                                {% if not loop.last %}, {% endif %}
+                             {% endfor %}
+                        </p>
                     </header>
 
                     <div class="entry-content">
@@ -30,27 +38,7 @@
             {% endif %}
         </div>
         <aside class="col-md-3">
-            <section class="box">
-                <h2>Categories</h2>
-                <ul>
-                    {% for category, resource in all_categories %}
-                        {% if category != "none" %}
-                        <li>
-                            <a href="{{ site.url }}/category/{{ category|lower }}">{{ category }}</a>
-                        </li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </section>
-            <section class="box">
-                <h2>Tags</h2>
-                <p>
-                    {% for tag, resource in all_tags %}
-                        <a href="{{ site.url }}/tag/{{ tag|lower }}">{{ tag }}</a>
-                        {% if not loop.last %}, {% endif %}
-                    {% endfor %}
-                </p>
-            </section>
+            {% include '@theme/partials/sidebar.html.twig' %}
         </aside>
     </div>
 {% endblock %}
