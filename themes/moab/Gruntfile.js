@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
     uglify: {
       dist: {
-        src: ['bower_components/jquery/jquery.js'],
+        src: ['bower_components/jquery/jquery.js', 'bower_components/jquery-jsonp/src/jquery.jsonp.js', 'bower_components/nanoGALLERY/jquery.nanogallery.js'],
         dest: 'assets/js/scripts.min.js'
       }
     },
@@ -35,10 +35,6 @@ module.exports = function (grunt) {
     watch: {
       options: {
         livereload: true,
-      },
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-          tasks: ['jshint:gruntfile']
       },
       odin: {
         files: [
