@@ -1,6 +1,10 @@
 ---
 title: Photography
+layout: @theme/layouts/photography.html.twig
 ---
+
+<div id="nanoGallery"></div>
+
 I upload all my photos to my Flickr account:
 
 <p style="text-align: center;">

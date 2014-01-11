@@ -1,0 +1,39 @@
+{% extends '@theme/layouts/base.html.twig' %}
+
+{% set sidebar = true %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-9">
+            <div class="box">
+                <h1>{{ title }}</h1>
+                {{ content }}
+            </div>
+            {% if sidebar is defined %}
+                {% include '@theme/partials/footer.html.twig' %}
+            {% endif %}
+        </div>
+        <aside class="col-md-3">
+            {% include '@theme/partials/sidebar.html.twig' %}
+        </aside>
+    </div>
+{% endblock %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/nanogallery.css" />
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script>
+    $(document).ready(function () {
+        jQuery("#nanoGallery").nanoGallery({
+            kind:'flickr',
+            userID:'78892102@N08',
+            topLabel: 'Cyling the World',
+            blackList: 'sort'
+        });
+    });
+    </script>
+{% endblock %}

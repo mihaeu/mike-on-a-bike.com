@@ -2,6 +2,7 @@
 title: 'Catching up: Part 2'
 categories:
   - Journal
+tags: ['georgia', 'armenia', 'cycling', 'iran', 'sick']
 ---
 <img alt="" src="http://farm9.staticflickr.com/8489/8224393433_62e09a9766_n.jpg" style="width: 240px; height: 320px; border: 3px solid black; margin: 5px; float: left;" />After cycling with my brother for almost a month I met up with (a cleanly shaven)&nbsp;Chris in the capital of Georgia, Tbilisi. Like every other major city in Georgia, Tbilisi wants to become a haven for mainstream tourism. Since the Rose Revolution eight years ago, Georgia opened its gates to tourists from all over the world (mostly Russians though). Removing the need for a visa, getting rid of the corrupt police and bringing in investors certainly helped the country. If you haven't been to Georgia, **now is the time to go**. Tourists will change the country and in less then a decade it will probably loose a lot of what makes Georgia so special.&nbsp;
 

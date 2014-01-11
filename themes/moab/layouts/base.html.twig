@@ -85,6 +85,8 @@
         {% endif %}
     </div>
     
-    <script src="{{ site.url }}/js/scripts.min.js"></script>
+    {% block js %}
+    <script src="{{ site.url }}/assets/js/scripts.min.js"></script>
+    {% endblock %}
 </body>
 </html>
