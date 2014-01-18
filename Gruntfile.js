@@ -5,8 +5,8 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     // basic properties
-    projectDir: '../..',
-    // projectDir: '/opt/lampp/htdocs/mike-on-a-bike',
+    // projectDir: '../..',
+    projectDir: '.',
     themeDir: '<%= projectDir %>/themes/moab',
     assetDir: '<%= themeDir %>/assets',
     bowerDir: '<%= themeDir %>/bower_components',
@@ -91,7 +91,7 @@ module.exports = function (grunt) {
         options: {
           stdout: true
         },
-        command: 'php <%= projectDir %>/odin generate --dir="<%= projectDir %>"" --title=DEVELOP'
+        command: 'php <%= projectDir %>/odin generate --dir="<%= projectDir %>" --title=DEVELOP'
       },
       production: {
         options: {
