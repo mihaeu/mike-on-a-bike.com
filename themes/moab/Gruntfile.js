@@ -4,10 +4,23 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
 
+    // basic properties
+    projectDir: '../..',
+    // projectDir: '/opt/lampp/htdocs/mike-on-a-bike',
+    themeDir: '<%= projectDir %>/themes/moab',
+    assetDir: '<%= themeDir %>/assets',
+    bowerDir: '<%= themeDir %>/bower_components',
+    outputDir: '<%= projectDir %>/output',
+    resourceDir: '<%= projectDir %>/resources',
+
     uglify: {
       dist: {
-        src: ['bower_components/jquery/jquery.js', 'bower_components/jquery-jsonp/src/jquery.jsonp.js', 'bower_components/nanoGALLERY/jquery.nanogallery.js'],
-        dest: 'assets/js/scripts.min.js'
+        src: [
+          '<%= bowerDir %>/jquery/jquery.js',
+          '<%= bowerDir %>/jquery-jsonp/src/jquery.jsonp.js',
+          '<%= bowerDir %>/nanoGALLERY/jquery.nanogallery.js'
+        ],
+        dest: '<%= assetDir %>/js/scripts.min.js'
       }
     },
     jshint: {
@@ -38,19 +51,19 @@ module.exports = function (grunt) {
       },
       odin: {
         files: [
-          '../../resources/**/*.md',
-          '../../config.yml',
-          '**/*.twig'
+          '<%= resourceDir %>/**/*.md',
+          '<%= projectDir %>/config.yml',
+          '<%= themeDir %>/*.twig'
         ],
-        tasks: ['shell:generate']
+        tasks: ['shell:develop']
       },
       css: {
-        files: 'assets/**/*.less',
-        tasks: ['recess', 'shell:generate']
+        files: '<%= assetDir %>/**/*.less',
+        tasks: ['recess', 'shell:develop']
       },
       js: {
-        files: 'assets/**/*.js',
-        tasks: ['uglify', 'shell:generate']
+        files: '<%= assetDir %>/**/*.js',
+        tasks: ['uglify', 'shell:develop']
       }
     },
     recess: {
@@ -60,8 +73,8 @@ module.exports = function (grunt) {
           compress: true
         },
         files: {
-          'assets/css/styles.min.css': [
-            'assets/less/styles.less'
+          '<%= assetDir %>/css/styles.min.css': [
+            '<%= assetDir %>/less/styles.less'
           ]
         }
       }
@@ -69,23 +82,29 @@ module.exports = function (grunt) {
     uncss: {
       dist: {
         files: {
-          'assets/css/styles.min.css': ['../../output/**/*.html']
+          '<%= assetDir %>/css/styles.min.css': ['<%= outputDir %>/**/*.html']
         }
       }
     },
     shell: {
-      generate: {
+      develop: {
         options: {
           stdout: true
         },
-        command: 'php ../../odin generate --dir=/opt/lampp/htdocs/mike-on-a-bike.com'
+        command: 'php <%= projectDir %>/odin generate --dir="<%= projectDir %>"" --title=DEVELOP'
+      },
+      production: {
+        options: {
+          stdout: true
+        },
+        command: 'php <%= projectDir %>/odin generate --dir="<%= projectDir %>" --url="http://mike-on-a-bike.com"'
       }
     },
     connect: {
       server: {
         options: {
           port: 8080,
-          base: '../../output'
+          base: '<%= outputDir %>'
         }
       }
     }
@@ -100,7 +119,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-uncss');
 
-  grunt.registerTask('default', ['jshint', 'recess', 'uglify', 'shell:generate']);
+  grunt.registerTask('default', ['jshint', 'recess', 'uglify', 'shell:develop']);
   grunt.registerTask('serve', ['connect', 'watch']);
 
 };
