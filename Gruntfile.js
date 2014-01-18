@@ -107,6 +107,19 @@ module.exports = function (grunt) {
           base: '<%= outputDir %>'
         }
       }
+    },
+
+    sprite: {
+      featured: {
+        engine: 'gm',
+        cssFormat: 'css',
+        src: '<%= assetDir %>/img/featured/*.jpg',
+        destImg: '<%= assetDir %>/img/featured.jpg',
+        destCSS: '<%= assetDir %>/less/sprites.less'
+      },
+      imgOpts: {
+         'quality': 100
+      }
     }
   });
 
@@ -118,6 +131,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-spritesmith');
+
 
   grunt.registerTask('default', ['jshint', 'recess', 'uglify', 'shell:develop']);
   grunt.registerTask('serve', ['connect', 'watch']);

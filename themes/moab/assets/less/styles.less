@@ -51,6 +51,8 @@
 @import "../../bower_components/bootstrap/less/utilities.less";
 @import "../../bower_components/bootstrap/less/responsive-utilities.less";
 
+@import "sprites.less";
+
 @body-bg: lighten(#000, 7%);
 
 html, body { 
@@ -70,52 +72,61 @@ header {
     text-align: center;
     .make-row();
 
-    .logo {
-        img {
-            // margin: 20px 0 0 20px;
-            width: 50px;
-            height: 50px;
+    .brand {
+        .make-lg-column(3);
+
+        .box {
+            margin-left: 15px;
+        }
+
+        .logo {
+            img {
+                // margin: 20px 0 0 20px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .title {
+            font-size: @font-size-h3;
+            font-family: @headings-font-family;
+            font-weight: @headings-font-weight;
+            display: block;
         }
     }
 
-    .title {
-        font-size: @font-size-h3;
-        font-family: @headings-font-family;
-        font-weight: @headings-font-weight;
-        display: block;
-    }
-}
-nav {
-    .make-lg-column(9);
+    nav {
+        .make-lg-column(9);
 
-    ul {
-        .make-row();
-        .nav();
-        .nav-pills();
-        
-        li {
-            .box();
-            width: 98%;
-            font-family: 'Lobster', cursive;
-            border-radius: @border-radius-base;
-            border: 1px solid #000;
-            font-size: @font-size-h4;
+        ul {
+            .make-row();
+            .nav();
+            .nav-pills();
+            
+            li {
+                .box();
+                font-family: 'Lobster', cursive;
+                border-radius: @border-radius-base;
+                border: 1px solid #000;
+                font-size: @font-size-h4;
 
-            a {
-                color: #fff;
+                a {
+                    color: #fff;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
 
                 &:hover {
-                    color: #fff;
+                    background: @btn-success-bg;
                 }
             }
-
-            &:hover {
-                background: @btn-success-bg;
-            }
+         
         }
-     
     }
 }
+
 .avatar {
     .make-lg-column(3);
 
