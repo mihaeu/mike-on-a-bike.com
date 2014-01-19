@@ -112,7 +112,7 @@ module.exports = function (grunt) {
         files: [
           '<%= resourceDir %>/**/*.md',
           '<%= projectDir %>/config.yml',
-          '<%= themeDir %>/*.twig'
+          '<%= themeDir %>/**/*.twig'
         ],
         tasks: ['shell:develop']
       },

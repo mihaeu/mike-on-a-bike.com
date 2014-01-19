@@ -3,13 +3,13 @@
 {% block title %}Tag: {{ title }} | {{ site.title}} {% endblock %}
 
 {% block main %}
-    <div class="row">
+    {# <div class="row"> #}
         <div class="col-md-12">
             <div class="box">
-                <h1>Tag: {{ title }}</h1>
+                <h2>Tag: {{ title }}</h2>
             </div>
         </div>
-    </div>
+    {# </div> #}
     <articles>
         {% for tag, resource in all_tags %}
             {% if tag == title %}

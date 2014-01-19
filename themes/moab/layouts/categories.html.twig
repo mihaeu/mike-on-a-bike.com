@@ -3,13 +3,13 @@
 {% block title %}Category: {{ title }} | {{ site.title}} {% endblock %}
 
 {% block main %}
-    <div class="row">
+    {# <div class="row"> #}
         <div class="col-md-12">
             <div class="box">
-                <h1>Category: {{ title }}</h1>
+                <h2>Category: {{ title }}</h2>
             </div>
         </div>
-    </div>
+    {# </div> #}
     <articles>
         {% for category, resource in all_categories %}
             {% if category == title %}
