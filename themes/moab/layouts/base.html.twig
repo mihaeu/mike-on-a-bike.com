@@ -7,12 +7,14 @@
     <meta name="description" content="{{ site.description }}" />
     <meta name="author" content="{{ site.author }}" />
 
-    <link rel="shortcut icon" href="{{ site.url }}/assets/ico/favicon.png" />
+    <link rel="shortcut icon" href="{{ 'assets/ico/favicon.png'|relativeTo(slug) }}" />
+    {# <link rel="shortcut icon" href="{{ site.url }}/assets/ico/favicon.png" /> #}
 
-    <title>{{ title }} | {{ site.title }}</title>
+    <title>{% block title %}{{ title }} | {{ site.title }}{% endblock %}</title>
 
     {% block css %}
-    <link href="{{ site.url }}/assets/css/styles.min.css" rel="stylesheet" />
+    <link href="{{ 'assets/css/styles.min.css'|relativeTo(slug) }}" rel="stylesheet" />
+    {# <link href="{{ site.url }}/assets/css/styles.min.css" rel="stylesheet" /> #}
     {% endblock %}
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
