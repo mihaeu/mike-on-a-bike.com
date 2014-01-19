@@ -1,18 +1,22 @@
 /*global module:false*/
 module.exports = function (grunt) {
-
-  // Project configuration.
   grunt.initConfig({
 
-    // basic properties
-    // projectDir: '../..',
+    /*********************************************
+     * Config properties
+     *********************************************/
     projectDir: '.',
+    // projectDir: '../..',
     themeDir: '<%= projectDir %>/themes/moab',
     assetDir: '<%= themeDir %>/assets',
     bowerDir: '<%= themeDir %>/bower_components',
     outputDir: '<%= projectDir %>/output',
     resourceDir: '<%= projectDir %>/resources',
 
+
+    /*********************************************
+     * Javascript related tasks
+     *********************************************/
     uglify: {
       dist: {
         src: [
@@ -45,25 +49,21 @@ module.exports = function (grunt) {
         src: 'Gruntfile.js'
       }
     },
-    watch: {
-      options: {
-        livereload: true,
+
+
+    /*********************************************
+     * Design related tasks (CSS, images, sprites)
+     *********************************************/
+    sprite: {
+      featured: {
+        engine: 'gm',
+        cssFormat: 'css',
+        src: '<%= assetDir %>/img/featured/*.jpg',
+        destImg: '<%= assetDir %>/img/featured.jpg',
+        destCSS: '<%= assetDir %>/less/sprites.less'
       },
-      odin: {
-        files: [
-          '<%= resourceDir %>/**/*.md',
-          '<%= projectDir %>/config.yml',
-          '<%= themeDir %>/*.twig'
-        ],
-        tasks: ['shell:develop']
-      },
-      css: {
-        files: '<%= assetDir %>/**/*.less',
-        tasks: ['recess', 'shell:develop']
-      },
-      js: {
-        files: '<%= assetDir %>/**/*.js',
-        tasks: ['uglify', 'shell:develop']
+      imgOpts: {
+         'quality': 100
       }
     },
     recess: {
@@ -86,6 +86,10 @@ module.exports = function (grunt) {
         }
       }
     },
+
+    /*********************************************
+     * Development workflow (connect, watch, open)
+     *********************************************/
     shell: {
       develop: {
         options: {
@@ -100,25 +104,33 @@ module.exports = function (grunt) {
         command: 'php <%= projectDir %>/odin generate --dir="<%= projectDir %>" --url="http://mike-on-a-bike.com"'
       }
     },
+    watch: {
+      options: {
+        livereload: true,
+      },
+      odin: {
+        files: [
+          '<%= resourceDir %>/**/*.md',
+          '<%= projectDir %>/config.yml',
+          '<%= themeDir %>/*.twig'
+        ],
+        tasks: ['shell:develop']
+      },
+      css: {
+        files: '<%= assetDir %>/**/*.less',
+        tasks: ['recess', 'shell:develop']
+      },
+      js: {
+        files: '<%= assetDir %>/**/*.js',
+        tasks: ['uglify', 'shell:develop']
+      }
+    },
     connect: {
       server: {
         options: {
           port: 8080,
           base: '<%= outputDir %>'
         }
-      }
-    },
-
-    sprite: {
-      featured: {
-        engine: 'gm',
-        cssFormat: 'css',
-        src: '<%= assetDir %>/img/featured/*.jpg',
-        destImg: '<%= assetDir %>/img/featured.jpg',
-        destCSS: '<%= assetDir %>/less/sprites.less'
-      },
-      imgOpts: {
-         'quality': 100
       }
     }
   });
@@ -141,4 +153,3 @@ module.exports = function (grunt) {
   grunt.registerTask('production', ['jshint', 'spritesmith', 'recess', 'uglify', 'uncss', 'shell:production']);
 
 };
-
