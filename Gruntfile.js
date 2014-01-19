@@ -133,9 +133,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-spritesmith');
 
-
-  grunt.registerTask('default', ['jshint', 'recess', 'uglify', 'shell:develop']);
+  // shorter than running ./odin generate
+  grunt.registerTask('default', ['shell:develop']);
   grunt.registerTask('serve', ['connect', 'watch']);
+
+  grunt.registerTask('dev', ['jshint', 'recess', 'uglify', 'shell:develop']);
+  grunt.registerTask('production', ['jshint', 'spritesmith', 'recess', 'uglify', 'uncss', 'shell:production']);
 
 };
 
