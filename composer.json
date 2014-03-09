@@ -12,6 +12,7 @@
   ],
   "require": {
     "php": ">=5.4",
-    "odin/odin": "@dev"
+    "odin/odin": "@dev",
+    "behat/behat": "*"
   }
 }

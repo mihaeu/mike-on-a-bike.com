@@ -128,7 +128,7 @@ module.exports = function (grunt) {
     connect: {
       server: {
         options: {
-          port: 8080,
+          port: 8088,
           base: '<%= outputDir %>'
         }
       }
@@ -150,6 +150,6 @@ module.exports = function (grunt) {
   grunt.registerTask('serve', ['connect', 'watch']);
 
   grunt.registerTask('dev', ['jshint', 'recess', 'uglify', 'shell:develop']);
-  grunt.registerTask('production', ['jshint', 'spritesmith', 'recess', 'uglify', 'uncss', 'shell:production']);
+  grunt.registerTask('production', ['jshint', /*'spritesmith',*/ 'recess', 'uglify', 'uncss', 'shell:production']);
 
 };
