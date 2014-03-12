@@ -1,23 +1,31 @@
 ---
 title: Living in Nepal
-categories: [draft]
+categories: [Journal]
 tags: ['nepal', 'lalitpur', 'kathmandu', 'apartment', 'ex-pat']
 ---
 Believe it or not, long-term travel can wear you out. After a while we all want to stop. It's not the physical part as one might expect. Actually already after a few months you won't experience this so much anymore. The body easily adapts to getting up my Brooks saddle every day until it's time to get back to sleep on a rocky uneven camp-spot.
 
-Come to think of it, it happened quite a lot that I stopped at rest stations where people complain about sitting in a car for four hours, while I just did a couple of hours on the saddle.
+![Lying on the roadside, sleeping from exhaustion](/assets/img/laos-exhausted.jpg)
 
-No it's definitely not the body, it's the mind that gets tired after a while. On a trip like this you do a lot of things that would fall into the category "unspeakable" for most people, but like it or not after a while it becomes your every day life.
+Come to think of it, it happened quite a lot that I stopped at rest stations where people complain about sitting in a car for four hours, after I did the same on my saddle without any complaints.
+
+No it's definitely not the body, it's the mind that gets tired after a while. On a trip like this you do a lot of things that would fall into the category "unspeakable" for most people, but like it or not, after a while it becomes your every day life.
 
 Meeting new and different people every day is great, saying goodbye to each and every one of them, is not always that great.
 
-So we felt like being in one place, meeting the same people and eating in the same places for a while. Since we were a bit tired of the typical South East Asia crowd (more about that later) we decided to go to Nepal instead.
+So we felt like staying at one place, meeting the same people and eating in the same places for a while. Since we were a bit tired of the typical South East Asia crowd (more about that later) we decided to go to Nepal instead.
+
+![Nepal Ganesh statue](/assets/img/nepal-statue.jpg)
 
 Nepal has been described to us as *India light* and after the countless stories that we heard about the hardships of traveling through India, that sounded like a good thing.
 
 If I had to describe the country with ten keywords I would probably come up with something like this:
 
-    mountains, tourism, hinduism, good food, low budget, colorful, dirty, buddhism, dhal bhat, cold
+    mountains, tourism, hinduism, good food, low budget, colorful, dirty, buddhism, daal bhat, cold
+
+![Nepal road side barber](/assets/img/nepal-barber.jpg)
+
+![Nepal road side barber](/assets/img/nepal-garbage-festival.jpg)
 
 We got a three-months multiple entry visa on arrival at the airport and took a taxi into the touristic center of town: **Thamel**.
 
@@ -25,12 +33,16 @@ Thamel is awesome, noisy, dirty and colorful. Just the right place to get into t
 
 Guys you can't believe how great it is to have a real kitchen after such a long time. I'm talking about more than one stove, a fridge, more and cleaner workspace and more storage than one or two Ortlieb bags can provide.
 
+![Nepal kitchen in our apartment](/assets/img/nepal-our-kitchen.jpg)
+
 We got into a rhythm pretty soon and we loved it:
 
 - we got up early followed by an ice cold shower (at least I did, Hajar instead attempted to brake my no-shower records which I set during winter/spring in Europe), because the solar heater takes too long
 - boil some milk (finally affordable and good milk after having almost no milk products while in South East Asia) and make hot muesli and coffee
 - Hajar is a vet and she wanted to get some more practical experience, so she was working in an animal shelter for a month, we both commuted there every day (in the end we cycled about 500km in Kathmandu)
 - I went back home and studied Farsi and worked on some nerdy IT stuff
+
+![Hajar working in Nepal as a vet](/assets/img/nepal-hajar-vet.jpg)
 
 A month can pass quickly, but it was exactly what we needed and now we know where we want to go from here: back to Iran.
 
@@ -45,4 +57,4 @@ In general it's a completely free course that lasts ten days. Food and accommoda
 - more than 10 hours of meditation every day
 - no talking, writing, reading !!!
 
-Maybe I'll get Hajar to write about her experience after she finished the course.
+Maybe I'll get Hajar to write about her experience after she finished the course otherwise you'll be hearing about my time in India hopefully sooner than later.
