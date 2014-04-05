@@ -1,0 +1,23 @@
+{
+  "name": "odin-theme-clean",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mihaeu/mike-on-a-bike.com",
+  "authors": [
+    "Michael Haeuslmann <haeuslmann@gmail.com>"
+  ],
+  "description": "A clean theme for Odin.",
+  "keywords": [
+    "clean",
+    "modern",
+    "html5"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

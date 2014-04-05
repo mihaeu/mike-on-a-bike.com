@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }} | {{ site.title }}</title>
+</head>
+<body>
+    <header>
+        {{ site.title }}
+    </header>
+    <nav>
+        <ul>
+            {% for post in resources %}
+                <li>
+                    <a href="{{ site.url }}/{{ post.slug }}">
+                        {{ post.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <section>
+        <h1>
+            {{ title }}
+        </h1>
+        <p>
+            {{ content }}
+        </p>
+    </section>
+</body>
+</html>

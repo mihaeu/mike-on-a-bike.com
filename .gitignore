@@ -1,5 +1,6 @@
 /vendor/
 /themes/moab/bower_components
+/themes/clean/bower_components
 node_modules
 /themes/moab/assets/img
 /.idea/

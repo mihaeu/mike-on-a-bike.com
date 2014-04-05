@@ -54,7 +54,7 @@ pretty_urls: 1
 #-------------------------------------------------------------------------------------------------#
 #                                                                                                 #
 #=================================================================================================#
-theme: moab
+theme: clean
 default_layout: @theme/layouts/post.html.twig
 theme_assets: %theme_folder%/assets
 ignore_assets: [bower_components, node_modules]
