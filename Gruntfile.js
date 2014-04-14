@@ -7,7 +7,7 @@ module.exports = function (grunt) {
      *********************************************/
     projectDir: '.',
     // projectDir: '../..',
-    themeDir: '<%= projectDir %>/themes/moab',
+    themeDir: '<%= projectDir %>/themes/clean',
     assetDir: '<%= themeDir %>/assets',
     bowerDir: '<%= themeDir %>/bower_components',
     outputDir: '<%= projectDir %>/output',
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
         options: {
           stdout: true
         },
-        command: 'php <%= projectDir %>/odin generate --dir="<%= projectDir %>" --title=DEVELOP'
+        command: 'php <%= projectDir %>/odin generate --dir="<%= projectDir %>" --title=mike-on-a-bike'
       },
       production: {
         options: {

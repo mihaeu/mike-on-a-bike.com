@@ -1,4 +1,136 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ title }} | {{ site.title }}</title>
+        <meta name="description" content="{{ site.description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="/bower_components/bootswatch/cosmo/bootstrap.min.css">
+        <script src="/bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">{{ site.title }}</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+
+                <li {% if slug == 'index.html' %}class="active"{% endif %}>
+                  <a href="{{ site.url }}">
+                    Home&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-home"></i>
+                  </a>
+                </li>
+                <li {% if slug == 'category/journal' %}class="active"{% endif %}>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Journal&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-book"></i> <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    {% for category, resource in all_categories %}
+                      {% if category == 'Journal' %}
+                        {% for post in resource|sortBy('date')|reverse %}
+                          <li>
+                            <a href="{{ site.url }}/{{ post.slug }}">
+                              {{ post.title }}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+                <li {% if slug == 'photography' %}class="active"{% endif %}>
+                  <a href="{{ site.url }}/photography">
+                    Photography&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-camera"></i>
+                  </a>
+                </li>
+                <li {% if slug == 'gear' %}class="active"{% endif %}>
+                  <a href="{{ site.url }}/gear">
+                    Gear&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-wrench"></i>
+                  </a>
+                </li>
+                <li {% if slug == 'route' %}class="active"{% endif %}>
+                  <a href="{{ site.url }}/route">
+                    Route&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-map-marker"></i>
+                  </a>
+                </li>
+                <li {% if slug == 'contact' %}class="active"{% endif %}>
+                  <a href="{{ site.url }}/contact">
+                    Contact&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-envelope"></i>
+                  </a>
+                </li>
+
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-push-3 col-md-6 col-xs-12">
+
+              {% block content %}
+                  
+                <h1>{{ title }}</h1>
+                <div class="blog-content">
+                  {{ content }}
+                </div>
+
+              {% endblock %}
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/bower_components/html5-boilerplate/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="/bower_components/html5-boilerplate/js/plugins.js"></script>
+        <script src="/bower_components/html5-boilerplate/js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
+
+
+{# <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,18 +138,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../assets/ico/favicon.ico">
+    <link rel="icon" href="/assets/ico/favicon.ico">
 
     <title>Blog Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <link href="/bower_components/bootswatch/cosmo/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -119,4 +245,4 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
   </body>
-</html>
+</html> #}

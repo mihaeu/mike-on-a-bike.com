@@ -19,5 +19,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootswatch": "~3.1.1+1",
+    "html5-boilerplate": "~4.3.0"
+  }
 }

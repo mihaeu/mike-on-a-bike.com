@@ -20,13 +20,14 @@ if you have any questions, suggestions or you simply want to chat with me, then 
     </div>
   </div>
   <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-8">
-        <textarea class="form-control" rows="3"></textarea>
+    <label for="message" class="col-sm-2">Message</label>
+    <div class="col-sm-8">
+        <textarea class="form-control" name="message" rows="3"></textarea>
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Sign in</button>
+      <button type="submit" class="btn btn-default">Send</button>
     </div>
   </div>
 </form>
